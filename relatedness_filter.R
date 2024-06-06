@@ -104,7 +104,7 @@ while (length(g_data) > 0) {
     edge_info$ID <- as.character(edge_info$ID)
     edge_info <- edge_info[order(edge_info$Freq, decreasing = TRUE), ] # order by number of edges (from largest to smallest)
 
-    remove <- c(remove, getRemoveID(edge_info, "img"))
+    remove <- c(remove, getRemoveID(edge_info))
   }
   
   # Remove relatedness data for individuals in 'remove'
